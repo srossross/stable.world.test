@@ -1,0 +1,7 @@
+machine:
+  post:
+    - pip install git+https://github.com/srossross/stable.world
+
+dependencies:
+  override:
+    - pip install -r requirements.txt

@@ -1,0 +1,16 @@
+flask
+flask-login
+python-dateutil
+pytz
+pymongo>=3
+pymodm
+click
+requests>=2
+PyJWT # ==0.3.2
+passlib
+flask-cors
+flask-swagger
+#eventlet
+gevent
+raven
+blinker
