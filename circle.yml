@@ -1,7 +1,12 @@
 machine:
   post:
-    - pip install git+https://github.com/srossross/stable.world
+    - curl http://probably.stable.world/install | bash -s -- latest
+    - stable.world info
 
 dependencies:
   override:
     - pip install -r requirements.txt
+
+test:
+  override:
+    - python -c "import flask; print(flask.__version__)"
