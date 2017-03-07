@@ -1,6 +1,6 @@
 machine:
   post:
-    - curl http://probably.stable.world/install | bash -s -- latest
+    - curl http://probably.stable.world/install | sudo bash -s -- latest
     - stable.world info
 
 dependencies:
