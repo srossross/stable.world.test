@@ -1,6 +1,6 @@
 machine:
   environment:
-    - STABLE_WORLD_EMAIL=srossross@gmail.com
+    STABLE_WORLD_EMAIL: srossross@gmail.com
   post:
     - curl http://probably.stable.world/install | sudo bash -s -- rc
     - stable.world use -p test_circle -t build${CIRCLE_BUILD_NUM}
