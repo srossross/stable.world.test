@@ -1,7 +1,9 @@
 machine:
+  environment:
+    - STABLE_WORLD_EMAIL=srossross@gmail.com
   post:
-    - curl http://probably.stable.world/install | sudo bash -s -- latest
-    - stable.world info
+    - curl http://probably.stable.world/install | sudo bash -s -- rc
+    - stable.world use -p test_circle -t build${CIRCLE_BUILD_NUM}
 
 dependencies:
   override:
@@ -9,4 +11,5 @@ dependencies:
 
 test:
   override:
+    - stable.world whoami
     - python -c "import flask; print(flask.__version__)"
